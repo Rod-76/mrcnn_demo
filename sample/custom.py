@@ -13,11 +13,11 @@ ROOT_DIR = os.path.abspath("C:\\Users\\jemar\\Desktop\\Python Projects\\OpenCV\\
 print("Custom MaskRCNN Loader")
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
-from config import Config
-import utils
-import model as modellib
-import visualize
-from model import log
+from mrcnn.config import Config
+import mrcnn.utils
+import mrcnn.model as modellib
+import mrcnn.visualize
+from mrcnn.model import log
 from PIL import Image, ImageDraw
 
 import warnings
@@ -57,7 +57,7 @@ class CustomConfig(Config):
     IMAGES_PER_GPU = 4
 
     # Number of classes
-    NUM_CLASSES = 1 + 1
+    NUM_CLASSES = 1 
 
     # Use small images for faster training. Set the limits of the small side
     # the large side, and that determines the image shape.

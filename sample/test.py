@@ -1,5 +1,5 @@
 import cv2
-import model as modellib
+import mrcnn.model as modellib
 import sys
 sys.path.append("C:\\Users\\jemar\\Desktop\\Python Projects\\OpenCV\\Fin\\mrcnn_demo")
 from custom import *
