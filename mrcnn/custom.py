@@ -18,11 +18,11 @@ ROOT_DIR = os.path.abspath("/content/mrcnn_demo")
 print("Mask RCNN Loader V1")
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
-from mrcnn.config import Config
-import mrcnn.utils
-import mrcnn.model as modellib
-import mrcnn.visualize
-from mrcnn.model import log
+from config import Config
+import utils
+import model as modellib
+import visualize
+from model import log
 from PIL import Image, ImageDraw
 
 import warnings
