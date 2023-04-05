@@ -9,7 +9,7 @@ import shutil
 import zipfile
 
 # Root directory of the project
-ROOT_DIR = os.path.abspath("C:\\Users\\jemar\\Desktop\\Python Projects\\OpenCV\\Fin\\mrcnn_demo")
+ROOT_DIR = os.path.abspath("/")
 print("Custom MaskRCNN Loader")
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
