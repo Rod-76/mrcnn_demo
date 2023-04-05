@@ -313,7 +313,7 @@ def load_test_model(num_classes):
     model.load_weights(model_path, by_name=True)
     return model, inference_config
 
-def load_inference_model(num_classes, model_path):
+def load_inference_model(num_classes):
     inference_config = InferenceConfig(num_classes)
 
     # Recreate the model in inference mode
