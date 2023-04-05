@@ -7,7 +7,7 @@ Licensed under the MIT License (see LICENSE for details)
 Written by Waleed Abdulla
 """
 
-from mrcnn_demo.config import Config
+from config import Config
 import os
 import random
 import datetime
@@ -27,7 +27,7 @@ import tensorflow.keras.layers as KL
 KE = KL
 import tensorflow.keras.models as KM
 
-from mrcnn_demo import utils
+import utils
 
 # Requires TensorFlow 1.3+ and Keras 2.0.8+.
 from distutils.version import LooseVersion
