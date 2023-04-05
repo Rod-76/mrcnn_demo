@@ -313,13 +313,13 @@ def load_test_model(num_classes):
     model.load_weights(model_path, by_name=True)
     return model, inference_config
 
-def load_inference_model(num_classes):
+def load_inference_model(num_classes, model_path):
     inference_config = InferenceConfig(num_classes)
 
     # Recreate the model in inference mode
     model = modellib.MaskRCNN(mode="inference",
                               config=inference_config,
-                              model_dir=COCO_MODEL_PATH)
+                              model_dir=model_path)
 
     # Get path to saved weights
     # Either set a specific path or find last trained weights
@@ -327,8 +327,8 @@ def load_inference_model(num_classes):
     #model_path = model.find_last()
 
     # Load trained weights
-    print("Loading weights from ", COCO_MODEL_PATH)
-    model.load_weights(COCO_MODEL_PATH, by_name=True)
+    print("Loading weights from ", model_path)
+    model.load_weights(model_path, by_name=True)
     return model, inference_config
 
 def test_random_image(test_model, dataset_val, inference_config):
